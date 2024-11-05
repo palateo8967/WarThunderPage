@@ -4,15 +4,22 @@
   box-sizing: border-box;
 }
 
-.sect {
-  width: 100%;
-  min-height: 500px;
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: red;
 }
 
-video {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  z-index: -1;
+header img{
+  width: 90px;
+  height: 90px;
+}
+
+.nav a{
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 7px;
+  background: blue;
+  color: antiquewhite;
 }
