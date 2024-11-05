@@ -1,13 +1,93 @@
-*{
+/* General */
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-main{
+body {
     display: flex;
     justify-content: center;
-    align-items: center;   
-    
+    align-items: center;
+    height: 100vh;
+    background-image: url("../media/img/fondoContact.jpg");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
 }
 
+/* Grid*/
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    border: 2px solid #ccc;
+}
+
+/* Imagen */
+.imgLa {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.imgLa img {
+    width: 80%;
+    height: auto;
+    max-height: 100px;
+    border: 2px solid #333;
+}
+
+/* Fila Izquierda */
+.imgLa:first-child img:nth-child(odd) {
+    align-self: flex-start;
+}
+
+.imgLa:first-child img:nth-child(even) {
+    align-self: flex-end;
+}
+
+/* Fila Derecha */
+.imgLa:last-child img:nth-child(odd) {
+    align-self: flex-end;
+}
+
+.imgLa:last-child img:nth-child(even) {
+    align-self: flex-start;
+}
+
+/* Formulario */
+.formCon form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    width: 100%; 
+}
+
+.formCon form label {
+    margin-bottom: 5px;
+}
+
+.formCon form input,
+.formCon form textarea,
+.formCon form button {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formCon form button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+}
+
+.formCon form button:hover {
+    background-color: #555;
+}
