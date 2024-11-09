@@ -1,25 +1,39 @@
-* {
-  padding: 0;
+*{
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+body{
+  font-family: 'PT Sans', sans-serif;
+}
+
 header{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+
+.nav{
+  width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background: red;
+  justify-content: space-between;
+  padding: 25px;
 }
 
-header img{
-  width: 90px;
-  height: 90px;
+.logo{
+  font-size: 25px;
+  color: #fff;
+  font-weight: 100;
 }
-
-.nav a{
-  text-decoration: none;
-  margin-right: 20px;
-  padding: 7px;
-  background: blue;
-  color: antiquewhite;
+.menu{
+  display: flex;
+}
+.menu li{
+  list-style: none;
+  margin: 10px;
+}
+.menu li a{
+  color: #fff;
 }
