@@ -1,1 +1,5 @@
-//kjnsackbcsbbasbacshbmzmbhzcxmzxcm xczmxhv gv
+const nav = document.querySelector('.nav');
+    
+    window.addEventListener('scroll', function(){
+        nav.classList.toggle('active', window.scrolly >0)
+    })

@@ -10,16 +10,31 @@ body{
 
 header{
   width: 100%;
-  height: 100vh;
+  height: 100vh; 
   background-size: cover;
+  background-image: url(../media/img/war_thunder_12th.jpg);  
 }
 
 .nav{
+  position: fixed;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 25px;
+  transition: all 0.5s ease;
+}
+.nav.active{
+  background-color: #fff;
+  padding: 15px;
+}
+.nav.active .logo,
+.nav.active a{
+  color: #000;
+}
+.nav.active a:hover{
+  background: #000;
+  color: #fff;
 }
 
 .logo{
@@ -36,4 +51,17 @@ header{
 }
 .menu li a{
   color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+.menu li a:hover{
+  padding: 5px 10px;
+  background: #fff;
+  color: black;
+  border-radius: 15px;
+}
+
+.scrol{
+  height: 100px;
 }
