@@ -64,12 +64,12 @@ header{
 .scrol{
   height: 100px;
 }
-
+/*
 .ppp{
   background-image: url(/media/img/fondoContact.jpg);
   width: 100%;
   opacity: 0.5;
-}
+}*/
 .descripcion{
   border: 2px solid #000;
   border-radius: 5px;
