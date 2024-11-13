@@ -1,0 +1,158 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Navar */
+header {
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.9); 
+  transition: background 0.3s, padding 0.3s;
+  z-index: 10;
+}
+
+
+header.shrink {
+  padding: 5px; 
+}
+
+header.shrink img{
+  height: 50px;
+  width: 50px;
+}
+
+
+.img {
+  margin-left: 30px;
+}
+
+header img {
+  width: 100px;
+  opacity: 0.8;
+  transition: 0.3s ease;
+  transition: lol 1s ease;
+}
+
+
+header img:hover {
+  opacity: 1;
+}
+
+#main{
+  animation: des 3s ease infinite;
+}
+
+@keyframes des{
+  0%{
+    opacity: 1;
+  }
+  25%{
+    opacity: 0.5;
+  }
+  50%{
+    opacity: 0.7;
+  }
+  75%{
+    opacity: 0.9;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+/* Estilos de los enlaces */
+.nav {
+  margin-right: 5px;
+}
+.nav a {
+  position: relative;
+  padding: 15px;
+  text-decoration: none;
+  margin-right: 15px;
+  color: #cfd8dc;
+  transition: color 0.3s ease;
+  z-index: 1;
+  line-height: 1;
+}
+
+.nav a:hover {
+  text-shadow: 0 0 5px #df1212, 0 0 10px rgb(22, 24, 24), 0 0 15px rgb(13, 14, 14), 0 0 20px rgb(15, 15, 15), 0 0 25px rgb(18, 19, 19);
+  z-index: 1;
+}
+
+/* Efecto de explosión*/
+.nav a::after {
+  content: "";
+  position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 100px; 
+    height: 100px;
+  background: url('../media/img/header/fondoExplosion.png') no-repeat center center;
+  background-size: contain;
+  opacity: 0;
+  z-index: -1;
+  transform: translate(-50%, -50%) scale(0);
+  transition: opacity 0.2s ease, transform 0.3s ease;
+}
+
+.nav a:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: -1;
+}
+
+.estaAqui {
+  text-shadow: 0 0 5px #df1212, 0 0 10px rgb(22, 24, 24), 0 0 15px rgb(13, 14, 14), 0 0 20px rgb(15, 15, 15), 0 0 25px rgb(18, 19, 19);
+  border-bottom: red solid;
+}
+
+/* Estilos para el botón  */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #df1212; 
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #df1212; 
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1;
+}
+
+#scrollTopBtn.show {
+  opacity: 1;
+  transform: translateY(0);
+}
